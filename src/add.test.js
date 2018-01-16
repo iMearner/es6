@@ -13,6 +13,10 @@ describe('Common Add Function', () => {
         expect(add("one","")).toBe("one ")
         expect(add("","")).toBe(" ")
     })
+    it('should return array from addition of two array', () => {
+        expect(add([1, 2],[3, 4])).toEqual([1, 2, 3, 4])
+        expect(add(["1", "2"],[3, 4])).toEqual(["1", "2", 3, 4])
+    })
     it('should throw an error if less than or more than 2 arguments provided', () => {
         expect(() => add(2,2,1)).toThrow()
         expect(() => add()).toThrow()
@@ -20,7 +24,7 @@ describe('Common Add Function', () => {
     })
     it('should throw if arguments is neither number nor string', () => {
         expect(() => add(true, false)).toThrow()
-        expect(() => add(['s', 'z'], [1,2,3])).toThrow()
+        expect(() => add([1,2],"d")).toThrow()
         expect(() => add({x: 5}, {y:6})).toThrow()
         expect(() => add({x: 5}, "s")).toThrow()
     })
