@@ -1,0 +1,21 @@
+{
+  "name": "es6",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src --exec babel-node",
+    "cleanup": "rimraf build",
+    "compile": "babel --copy-files src -d build",
+    "build": "npm-run-all cleanup compile",
+    "test": "jest --watch"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "jest": "^22.1.1",
+    "nodemon": "^1.14.11",
+    "npm-run-all": "^4.1.2",
+    "rimraf": "^2.6.2"
+  }
+}
