@@ -5,7 +5,11 @@ export const users = {
 
 export default function testUser(userId) {
     return new Promise((resolve, reject) => {
-        resolve(users[userId])
+        if(userId === 4 || userId === 5 ){
+            resolve(users[userId])
+        }else{
+            reject(`user with id : ${userId} not found`)
+        }
     })
 }
 

@@ -20,7 +20,7 @@ describe('Common Add Function', () => {
     })
     it('should throw an error if less than or more than 2 arguments provided', () => {
         expect(() => add(2,2,1)).toThrow()
-        expect(() => add()).toThrow()
+        expect(() => add(1)).toThrow()
         expect(() => add(2)).toThrow()
     })
     it('should throw if arguments is neither number nor string', () => {

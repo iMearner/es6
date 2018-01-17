@@ -10,5 +10,8 @@ describe('test to check if user is available', () => {
         expect.assertions(2);
         expect(await testUser(4)).toEqual('mark')
         expect(await testUser(5)).toEqual('roy')
+    }),
+    it('should return the error for non existing users', async() => {
+        expect(testUser(3)).rejects.toEqual('user with id : 3 not found');
     })
 })
