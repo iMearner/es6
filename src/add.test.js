@@ -16,6 +16,7 @@ describe('Common Add Function', () => {
     it('should return array from addition of two array', () => {
         expect(add([1, 2],[3, 4])).toEqual([1, 2, 3, 4])
         expect(add(["1", "2"],[3, 4])).toEqual(["1", "2", 3, 4])
+        expect(add([],[])).toEqual([])
     })
     it('should throw an error if less than or more than 2 arguments provided', () => {
         expect(() => add(2,2,1)).toThrow()

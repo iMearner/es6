@@ -8,13 +8,12 @@ function add(x, y) {
     }
 
     //  add condition to add two array
-    if (typeof x === "object" && typeof y === "object" ) {
-        console.log("inside ")
+    if (typeof x === "object") {
         x.push.apply(x,y)
         return x
     }
 
-    if (typeof x === 'string' && typeof y === 'string' ) {
+    if (typeof x === 'string') {
         return x + " " + y
     }
 
